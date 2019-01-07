@@ -1,0 +1,72 @@
+#chord {
+  padding: 13px 24px 24px 18px;
+  width: 65%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #EDB4A1;
+  border-radius: 30px;
+  box-shadow: 1px 3px 5px 0 rgba(0, 0, 0, 0.2), 3px 5px 13px 0 rgba(0, 0, 0, 0.19);
+}
+.chordButton {
+  color: #764462;
+  font-weight: bold;
+  background-color: #68A9A9;
+  border: 1px #447276 solid;
+  height: 33px;
+  width: 100px;
+  border-radius: 15px;
+  margin: 3px 0px;
+  padding: 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 2px 4px 10px 0 rgba(0, 0, 0, 0.14);
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+.chordButton:hover {
+  background-color: #A1E0ED;
+  color: #447276;
+}
+#plusButton {
+  width: 20px;
+  border-radius: 0 15px 15px 0;
+}
+#minusButton {
+  width: 20px;
+  border-radius: 15px 0 0 15px;
+}
+#bpm {
+  color: #764462;
+  font-weight: bold;
+  background-color: #68A9A9;
+  border: 1px #447276 solid;
+  padding: 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.15), 2px 4px 10px 0 rgba(0, 0, 0, 0.14);
+  width: 60px;
+  height: 32px;
+  margin: 0px;
+  text-align: center;
+  border-radius: 0 0 0 0;
+}
+#bpm {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+#bpm::-webkit-inner-spin-button, #bpm::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+.slide-fade-enter-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
