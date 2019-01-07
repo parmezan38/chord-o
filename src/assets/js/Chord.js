@@ -17,8 +17,11 @@ export default {
     return {
       NOTES: ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'],
       CHORDS: [
-        {name: 'Major', notes: [0, 4, 7], used: true},
-        {name: 'Minor', notes: [0, 3, 7], used: true}
+        {name: 'Major triad', notes: [0, 4, 7], used: true},
+        {name: 'Minor triad', notes: [0, 3, 7], used: true},
+        {name: 'Major seventh', notes: [0, 4, 7, 11], used: true},
+        {name: 'Minor seventh', notes: [0, 3, 7, 10], used: true}
+
       ],
       optionsData: {
         show: false,
@@ -67,7 +70,14 @@ export default {
           newNotes = notesFromChordPositions()
 
       this.chordDisplay = newRoot.note + ' ' + newChord.name
-      this.notesDisplay = newNotes.textNotes[0].name + ' ' + newNotes.textNotes[1].name + ' ' + newNotes.textNotes[2].name
+      let notesString = () => {
+        let str = ''
+        newNotes.textNotes.forEach(note => {
+          str += note.name + ' '
+        })
+        return str
+      }
+      this.notesDisplay = notesString()
 
       let keys = document.querySelector('#keys').children,
           renderOrder = document.querySelector('#renderOrder')
