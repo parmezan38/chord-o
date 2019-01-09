@@ -1,6 +1,6 @@
 # Chord-O
 
-> Chord-O is a simple, hihgly customizable and extendable app for helping with music chord practicing. It features various music chords and can easily be customized to add more.
+> Chord-O is a simple, highly customizable and extendable app for helping with music chord practicing. It features various music chords and can easily be customized to add more.
 
 ## Build Setup
 
