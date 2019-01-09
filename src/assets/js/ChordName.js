@@ -1,7 +1,4 @@
 export default {
   name: 'ChordName',
-  props: ['chordDisplay'],
-  data () {
-    return {}
-  }
+  props: ['chordDisplay']
 }

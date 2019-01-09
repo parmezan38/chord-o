@@ -1,6 +1,3 @@
 export default {
-  name: 'PianoKeys',
-  data () {
-    return {}
-  }
+  name: 'PianoKeys'
 }
