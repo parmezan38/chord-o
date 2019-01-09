@@ -2,6 +2,7 @@ import OptionsContainer from '@/components/OptionsContainer'
 import ChordName from '@/components/ChordName'
 import ChordNotes from '@/components/ChordNotes'
 import PianoKeys from '@/components/PianoKeys'
+import PianoKeysData from '@/assets/js/PianoKeysData'
 
 import {Howl, Howler} from 'howler'
 
@@ -23,6 +24,7 @@ export default {
         {name: 'Minor seventh', notes: [0, 3, 7, 10], used: true}
 
       ],
+      pianoKeysData: PianoKeysData.data,
       optionsData: {
         show: false,
         chordDisplayOn: true,
@@ -53,10 +55,8 @@ export default {
       this.chordDisplay = newRoot.note + ' ' + newChord.name
       this.notesDisplay = this.createNotesString(newNotes)
 
-      let keys = document.querySelector('#keys').children,
-          renderOrder = document.querySelector('#renderOrder')
-      this.clearDisplayedNotes(keys, renderOrder)
-      this.addDisplayedNotes(newNotes, keys, renderOrder)
+      this.clearDisplayedNotes()
+      this.addDisplayedNotes(newNotes)
     },
     startCreateChordLoop () {
       let tempo = 60000 / this.bpm
@@ -122,23 +122,15 @@ export default {
       })
       return str
     },
-    clearDisplayedNotes (keys, renderOrder) {
-      for (let i = 0; i < keys.length; i++) {
-        // Remove selected-key style
-        keys[i].classList.remove('selected-key')
-        // Remove from render order
-        while (renderOrder.firstChild) {
-          renderOrder.removeChild(renderOrder.firstChild)
-        }
+    clearDisplayedNotes () {
+      for (let i = 0; i < this.pianoKeysData.length; i++) {
+        this.pianoKeysData[i].selected = false
       }
     },
-    addDisplayedNotes (newNotes, keys, renderOrder) {
+    addDisplayedNotes (newNotes) {
       for (let i = 0; i < newNotes.keyNotes.length; i++) {
         let noteIndex = newNotes.keyNotes[i].index
-        // Add selected-key style
-        keys[noteIndex].classList.add('selected-key')
-        // Add to render order
-        renderOrder.insertAdjacentHTML('beforeend', '<use xlink:href="#' + keys[noteIndex].id + '"/>')
+        this.pianoKeysData[noteIndex].selected = true
         // Play Note Sounds
         this.playSound(noteIndex)
       }

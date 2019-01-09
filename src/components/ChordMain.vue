@@ -34,7 +34,7 @@
 
     <transition name="slide-fade">
         <div v-show="optionsData.keysDisplayOn">
-          <piano-keys></piano-keys>
+          <piano-keys :pianoKeysData="pianoKeysData"></piano-keys>
         </div>
     </transition>
 

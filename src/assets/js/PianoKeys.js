@@ -1,3 +1,4 @@
 export default {
-  name: 'PianoKeys'
+  name: 'PianoKeys',
+  props: ['pianoKeysData']
 }

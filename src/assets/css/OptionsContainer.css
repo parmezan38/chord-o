@@ -36,7 +36,6 @@
   background: #447276;
   cursor: pointer;
 }
-
 .slider::-moz-range-thumb {
   width: 15px;
   height: 15px;
@@ -44,7 +43,6 @@
   background: #447276;
   cursor: pointer;
 }
-
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -52,14 +50,12 @@
   width: 38px;
   height: 18px;
 }
-
 /* Hide default HTML checkbox */
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 /* The slider */
 .checkbox-slider {
   position: absolute;
@@ -73,7 +69,6 @@
   transition: .4s;
   border-radius: 34px;
 }
-
 .checkbox-slider:before {
   position: absolute;
   content: "";
@@ -86,15 +81,12 @@
   transition: .4s;
   border-radius: 50%;
 }
-
 input:checked + .checkbox-slider {
   background-color: #A1E0ED;
 }
-
 input:focus + .checkbox-slider {
   box-shadow: 0 0 1px #A1E0ED;
 }
-
 input:checked + .checkbox-slider:before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
