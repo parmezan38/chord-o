@@ -3,18 +3,18 @@
     <div id="app">
       <h1>Chord-O</h1>
       <h2>A simple app to help you with practicing chords</h2>
-      <Chord/>
+      <chord-main></chord-main>
     </div>
   </div>
 </template>
 
 <script>
-import Chord from './components/Chord'
+import ChordMain from './components/ChordMain'
 
 export default {
   name: 'App',
   components: {
-    Chord
+    ChordMain
   },
   data () {
     return {}

@@ -41,5 +41,5 @@
   </div>
 </template>
 
-<script src="../assets/js/Chord.js"></script>
-<style src="../assets/css/Chord.css" scoped></style>
+<script src="../assets/js/ChordMain.js"></script>
+<style src="../assets/css/ChordMain.css" scoped></style>
