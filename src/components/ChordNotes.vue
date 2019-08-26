@@ -4,5 +4,5 @@
   </div>
 </template>
 
-<script src="../assets/js/ChordNotes.js"></script>
+<script src="../assets/js/components/ChordNotes.js"></script>
 <style src="../assets/css/ChordDisplay.css"></style>

@@ -35,5 +35,5 @@
   </div>
 </template>
 
-<script src="../assets/js/PianoKeys.js"></script>
+<script src="../assets/js/components/PianoKeys.js"></script>
 <style src="../assets/css/ChordDisplay.css"></style>

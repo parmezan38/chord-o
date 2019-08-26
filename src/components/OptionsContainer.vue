@@ -67,5 +67,5 @@
   </div>
 </template>
 
-<script src="../assets/js/OptionsContainer.js"></script>
+<script src="../assets/js/components/OptionsContainer.js"></script>
 <style src="../assets/css/OptionsContainer.css" scoped></style>
