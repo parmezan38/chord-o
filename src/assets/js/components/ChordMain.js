@@ -1,10 +1,10 @@
-import OptionsContainer from '@/components/OptionsContainer'
-import ChordName from '@/components/ChordName'
-import ChordNotes from '@/components/ChordNotes'
-import PianoKeys from '@/components/PianoKeys'
-import PianoKeysData from '@/assets/js/components/PianoKeysData'
+import OptionsContainer from '@/components/OptionsContainer';
+import ChordName from '@/components/ChordName';
+import ChordNotes from '@/components/ChordNotes';
+import PianoKeys from '@/components/PianoKeys';
+import PianoKeysData from '@/assets/js/components/PianoKeysData';
 
-import {Howl, Howler} from 'howler'
+import {Howl, Howler} from 'howler';
 
 export default {
   name: 'ChordMain',
@@ -14,7 +14,7 @@ export default {
     ChordNotes,
     PianoKeys
   },
-  data () {
+  data() {
     return {
       NOTES: ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'],
       CHORDS: [
@@ -22,7 +22,6 @@ export default {
         {name: 'Minor triad', notes: [0, 3, 7], used: true},
         {name: 'Major seventh', notes: [0, 4, 7, 11], used: true},
         {name: 'Minor seventh', notes: [0, 3, 7, 10], used: true}
-
       ],
       pianoKeysData: PianoKeysData.data,
       optionsData: {
@@ -37,7 +36,7 @@ export default {
       chordDisplay: 'Chord Name',
       notesDisplay: 'Notes',
       interval: null
-    }
+    };
   },
   methods: {
     playSound(keyNumber) {
@@ -94,7 +93,7 @@ export default {
       const usedChords = [];
       this.CHORDS.forEach(usedChord => {
         if (usedChord.used) {
-          usedChords.push(usedChord)
+          usedChords.push(usedChord);
         }
       });
       const randomNumForChord = Math.round(Math.random() * (usedChords.length - 1));
@@ -105,8 +104,8 @@ export default {
       newChord.notes.forEach(pos => {
         const newTextPos = (pos + newRoot.index) % this.NOTES.length;
         const newKeyPos = pos + newRoot.index;
-        notes.textNotes.push({index: newTextPos, name: this.NOTES[newTextPos]})
-        notes.keyNotes.push({index: newKeyPos, name: this.NOTES[newKeyPos]})
+        notes.textNotes.push({index: newTextPos, name: this.NOTES[newTextPos]});
+        notes.keyNotes.push({index: newKeyPos, name: this.NOTES[newKeyPos]});
       });
       return notes;
     },
@@ -114,7 +113,7 @@ export default {
       let str = '';
       newNotes.textNotes.forEach(note => {
         str += note.name + ' ';
-      })
+      });
       return str;
     },
     clearDisplayedNotes() {
@@ -131,4 +130,4 @@ export default {
       }
     }
   }
-}
+};

@@ -25,4 +25,4 @@ export default {
     {name: 'Ash2', selected: false},
     {name: 'B2', selected: false}
   ]
-}
+};
