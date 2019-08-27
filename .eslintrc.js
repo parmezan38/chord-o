@@ -16,16 +16,15 @@ module.exports = {
     'standard'
   ],
   // required to lint *.vue files
-  plugins: [
-    'vue'
-  ],
+  plugins: [ 'vue' ],
   // add your custom rules here
   rules: {
     // allow async-await
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'one-var': [2, 'consecutive'],
+    'space-before-function-paren': ['error', 'never'],
+    'semi': ['error', 'always'],
     'indent': [2, 2, { 'VariableDeclarator': { 'var': 2, 'let': 2, 'const': 3 } }],
   }
 }
